@@ -1234,6 +1234,26 @@ nav ul li a:hover {
         max-height: 200px;
         object-fit: cover;
     }
+     .projects {
+    padding: 0 16px;
+    justify-content: center;
+   }
+    
+    .card {
+    margin: 0 auto; /* center the card */
+    max-width: 340px; /* limit width to avoid overflow */
+  }
+     .certification-grid {
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  .certification-card {
+    margin: 0 auto;
+    max-width: 340px;
+  }
+
+
     .project-image {
         margin-bottom: 0;
         padding: 15px;
