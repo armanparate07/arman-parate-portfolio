@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div id="particles-js"></div>
+        <nav id="main-nav" class="initial">
+            <div class="hamburger">☰</div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Hello.</h1>
+            <h2>— I'm Arman Parate</h2>
+            <h3>Full-Stack Developer & AI Enthusiast</h3>
+            <button class="button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1-1rH0jA37eFLQJUrbeut0cYCYmzqSyC6'">↓ Download CV</button>
+            <p>Possesses versatile skills in project management, problem-solving, and collaboration. Brings fresh perspective and strong commitment to quality and success.</p>
+            <button class="button" onclick="scrollToContact()">Lets Talk →</button>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="section-header">
+            <h2>Who am I?</h2>
+        </div>
+        <div style="display: flex; justify-content: center; width: 100%;">
+            <div style="display: flex; flex-direction: column; padding: 30px; text-align: center; max-width: 1000px; align-items: center;" class="about-content">
+                <div style="flex-grow: 1;">
+                    <h3>About Me</h3>
+                    <p style="height: 100%;">Hi, I'm Arman Parate, a Full-Stack Developer & AI Enthusiast. I’m passionate about building practical solutions with code. Currently pursuing my Master’s in Computer Applications, I enjoy working with Java, Python, and SQL to create functional applications, from web systems to simple AI tools. I’m still growing, but I care about clean code, usability, and continuous learning. If you’re looking for someone who’s curious and hardworking, let’s chat! Additionally, I have a keen interest in exploring emerging technologies and contributing to innovative projects that make a difference. My journey includes hands-on experience with various frameworks and tools, which I leverage to deliver high-quality results.</p>
+                    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;" class="flex-text">
+                        <div><strong>Name</strong><br>Arman Parate</div>
+                        <div><strong>Address</strong><br>Nagpur, India</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="button" style="margin-top: 30px;" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1-1rH0jA37eFLQJUrbeut0cYCYmzqSyC6'">↓ Download CV</button>
+                    <div class="decorative-space"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="services">
+        <div class="section-header">
+            <h2>What I Do?</h2>
+        </div>
+        <div class="carousel-container">
+            <div class="services" id="services-container">
+                <div class="card">
+                    <h3>Full-Stack Development</h3>
+                    <p>Building responsive web applications using Java, HTML, CSS, and SQL with intuitive user interfaces. This includes creating seamless front-end and back-end integrations, ensuring robust performance and scalability for various projects.</p>
+                </div>
+                <div class="card">
+                    <h3>AI & Computer Vision</h3>
+                    <p>Developing AI-driven solutions with Python, OpenCV, and YOLOv5 for tasks like object detection. This involves implementing advanced algorithms to enhance accuracy and efficiency in real-world applications.</p>
+                </div>
+                <div class="card">
+                    <h3>Database Management</h3>
+                    <p>Designing and optimizing SQL databases for secure and efficient data handling. This includes creating complex queries, ensuring data integrity, and maintaining performance under high load.</p>
+                </div>
+                <div class="card">
+                    <h3>Project Management</h3>
+                    <p>Leading projects with a focus on collaboration, adaptability, and timely delivery. This encompasses planning, resource allocation, and coordinating teams to meet project milestones effectively.</p>
+                </div>
+            </div>
+            <div class="carousel-arrows">
+                <button class="carousel-arrow" id="prev-service-button">←</button>
+                <button class="carousel-arrow" id="next-service-button">→</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="portfolio">
+        <div class="section-header">
+            <p>My Work</p>
+            <h1>Latest Projects</h1>
+        </div>
+        <div class="categories">
+            <button class="category-button active" data-category="java">Java Projects</button>
+            <button class="category-button" data-category="python">Python Projects</button>
+            <button class="category-button" data-category="data">Data Analyst</button>
+            <button class="category-button" data-category="more">More Projects</button>
+        </div>
+        <div class="category-dropdown">
+            <div class="dropdown-toggle" id="category-toggle">Java Projects</div>
+            <ul class="dropdown-menu" id="category-menu">
+                <li class="dropdown-item" data-category="java">Java Projects</li>
+                <li class="dropdown-item" data-category="python">Python Projects</li>
+                <li class="dropdown-item" data-category="data">Data Analyst</li>
+                <li class="dropdown-item" data-category="more">More Projects</li>
+            </ul>
+        </div>
+        <div class="project-showcase">
+            <div id="project-container"></div>
+        </div>
+    </div>
+
+    <div class="section" id="skills">
+        <div class="section-header">
+            <h2>My Skills</h2>
+        </div>
+        <div class="skills">
+            <div class="skill-card">
+                <h3>HTML/CSS</h3>
+                <p>Proficient in creating well-structured, semantic HTML and styling with CSS for responsive and visually appealing web interfaces.</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Experienced in interactive front-end development, including DOM manipulation, event handling, and modern ES6+ features.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Skilled in Python for backend development, data analysis, scripting, and various automation tasks.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Java</h3>
+                <p>Expert in Java programming, including object-oriented design, data structures, and building robust applications.</p>
+            </div>
+            <div class="skill-card">
+                <h3>SQL</h3>
+                <p>Adept at database design, querying, and management using SQL for efficient data storage and retrieval.</p>
+            </div>
+            <div class="skill-card">
+                <h3>UI/UX Design</h3>
+                <p>Understanding of user-centered design principles to create intuitive and engaging user experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="certifications">
+        <div class="section-header">
+            <h1>My Certifications</h1>
+        </div>
+        <div class="certification-grid">
+            <div class="certification-card">
+                <h2>AWS Cloud Technical Essentials</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Demonstrates foundational knowledge of AWS cloud computing concepts and services.</p>
+                <a href="https://drive.google.com/file/d/1n2czhRZV_fRPbTnnYt0EzssxftgXTyna/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Enterprise Product Management</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Covers key strategies and practices for managing products within an enterprise environment.</p>
+                <a href="https://drive.google.com/file/d/1VRiEBiPNscfzzdQEpPkkx3_mahFURVqN/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Preparing Data for Analysis with Microsoft Excel</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Covers techniques for cleaning, organizing, and preparing data for analysis using Microsoft Excel, enhancing data-driven decision-making skills.</p>
+                <a href="https://drive.google.com/file/d/13T7-eurrlBwbsi4eCVHJppDivL0YGVXv/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Ethical Hacking</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Focuses on understanding and practicing ethical hacking techniques for security assessments.</p>
+                <a href="https://drive.google.com/file/d/1kP32jYP3pCGF76bzgxfAhP-3QXEgFloq/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Foundation of Project Management</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Establishes fundamental concepts and methodologies essential for successful project management.</p>
+                <a href="https://drive.google.com/file/d/17Cfmahk-UxxqABOVUdhoko8kzJeT0aoi/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Foundation of User Experience</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Introduces core principles and processes for designing user-centric experiences.</p>
+                <a href="https://drive.google.com/file/d/1kCS-A5wuAM9OJRqNv9kZstrZAQB27Nos/view?usp=sharing" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Java Programming Fundamental</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Covers essential syntax, object-oriented concepts, and basic application development in Java.</p>
+                <a href="https://drive.google.com/file/d/18SJiDfqluIYOevrs2QSXEMBxR7OH2XdE/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-card">
+                <h2>Start the UX Design Process Empathize Define and Ideate</h2>
+                <span class="rating">★★★★★</span>
+                <p class="description">Explores the initial stages of UX design, including user research and problem definition.</p>
+                <a href="https://drive.google.com/file/d/1q4aTeOb_813tX3_RKH6N1CAT3H1RX6Qo/view?usp=drive_link" class="button" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="contact">
+        <div class="section-header">
+            <p>Get in Touch</p>
+            <h1>Contact Me</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <img src="https://i.ibb.co/pjQf89Tv/20250621-1315-Monochrome-Typing-Scene-simple-compose-01jy8q3hd6esxr9svapb5wsqe6.png" alt="Typing Scene">
+            </div>
+            <div class="contact-form">
+                <h3>Reach Out</h3>
+                <p>Feel free to connect with me for collaborations, project inquiries, or just a friendly chat!</p>
+                <h3>Send a Message</h3>
+                <form id="contactForm" action="https://formspree.io/f/xqabyqzb" method="POST">
+                    <label>
+                        Your Name:
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </label>
+                    <label>
+                        Your email:
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </label>
+                    <input type="text" name="_gotcha" style="display:none;" disabled>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Arman Parate. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/armanparate07" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/armanparate/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
