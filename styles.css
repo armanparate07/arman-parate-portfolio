@@ -1115,6 +1115,8 @@ nav ul li a:hover {
         align-items: center;
         max-width: 350px;
         margin: 0 auto; /* Added/Ensured */
+        margin-left: -20px; /* Shift left */
+        width: calc(350px + 20px); /* Adjust width to prevent overflow */
     }
     .skills::before, .skills::after {
         display: none;
@@ -1142,6 +1144,8 @@ nav ul li a:hover {
         gap: 20px;
         max-width: 350px;
         margin: 0 auto; /* Added/Ensured */
+        margin-left: -20px; /* Shift left */
+        width: calc(350px + 20px); /* Adjust width to prevent overflow */
     }
     .certification-grid::before, .certification-grid::after {
         display: none;
@@ -1277,6 +1281,8 @@ nav ul li a:hover {
     }
     .project-showcase {
         padding: 0 10px;
+        margin-left: -20px; /* Shift left */
+        width: calc(100% + 20px); /* Adjust width to prevent overflow */
     }
     #project-container { /* Added/Ensured for mobile */
         flex-direction: column;
@@ -1419,6 +1425,20 @@ nav ul li a:hover {
     .decorative-space {
         height: 20px;
     }
+    /* Specific adjustments for very small screens */
+    .skills {
+        margin-left: -10px; /* Shift left for smaller screens */
+        width: calc(350px + 10px); /* Adjust width to prevent overflow */
+    }
+    .certification-grid {
+        margin-left: -10px; /* Shift left for smaller screens */
+        width: calc(350px + 10px); /* Adjust width to prevent overflow */
+    }
+    .project-showcase {
+        margin-left: -10px; /* Shift left for smaller screens */
+        width: calc(100% + 10px); /* Adjust width to prevent overflow */
+    }
+
     @media (max-width: 900px) {
     .card p {
      font-size: 0.85em;
