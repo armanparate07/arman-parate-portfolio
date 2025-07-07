@@ -1001,16 +1001,11 @@ nav ul li a:hover {
 
 #about .flex-text {
     font-size: 1.1em;
-    background: none;
-}
-
-#about .flex-text div {
-    color: #fff; /* Explicitly set text color to white */
 }
 
 .decorative-space {
     height: 40px;
-    /* background: linear-gradient(to bottom, transparent, rgba(210, 180, 140, 0.1)); */ /* Removed gradient to prevent overlap */
+    background: linear-gradient(to bottom, transparent, rgba(210, 180, 140, 0.1));
     margin-top: 30px;
 }
 
@@ -1074,6 +1069,8 @@ nav ul li a:hover {
         width: 90%;
         padding: 30px 0;
         min-height: auto;
+        margin: 0 auto; /* Added/Ensured */
+        text-align: center; /* Added */
     }
     .section h2 {
         font-size: 2.5em;
@@ -1117,6 +1114,7 @@ nav ul li a:hover {
         min-height: auto;
         align-items: center;
         max-width: 350px;
+        margin: 0 auto; /* Added/Ensured */
     }
     .skills::before, .skills::after {
         display: none;
@@ -1143,6 +1141,7 @@ nav ul li a:hover {
         grid-template-columns: 1fr;
         gap: 20px;
         max-width: 350px;
+        margin: 0 auto; /* Added/Ensured */
     }
     .certification-grid::before, .certification-grid::after {
         display: none;
@@ -1173,6 +1172,7 @@ nav ul li a:hover {
     .contact-content {
         flex-direction: column;
         gap: 20px;
+        align-items: center; /* Added to center content */
     }
     .contact-info, .contact-form {
         padding: 10px;
@@ -1227,6 +1227,7 @@ nav ul li a:hover {
         gap: 30px;
         width: 100%;
         max-width: 350px;
+        margin: 0 auto; /* Added/Ensured */
     }
     .app-screens img {
         width: 100%;
@@ -1265,8 +1266,6 @@ nav ul li a:hover {
     }
     .decorative-space {
         height: 30px;
-        /* background: linear-gradient(to bottom, transparent, rgba(210, 180, 140, 0.1)); */
-        margin-top: 30px;
     }
     body {
         overflow-x: hidden;
@@ -1278,6 +1277,12 @@ nav ul li a:hover {
     }
     .project-showcase {
         padding: 0 10px;
+    }
+    #project-container { /* Added/Ensured for mobile */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
 }
 
@@ -1297,6 +1302,13 @@ nav ul li a:hover {
     .header .button {
         padding: 5px 10px;
         font-size: 0.9em;
+    }
+    .section { /* Added/Ensured for very small screens */
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+        text-align: center;
     }
     .section h2 {
         font-size: 2.2em;
@@ -1431,28 +1443,5 @@ nav ul li a:hover {
     .card h3 {
         font-size: 1.1em;
         margin-bottom: 12px;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .contact-content,
-    .about-content {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .center-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 }
