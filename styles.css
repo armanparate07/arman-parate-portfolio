@@ -177,7 +177,7 @@ nav ul li a:hover {
 
 .section-header h1, .section-header h2 {
     font-size: 3em;
-    margin: 0;
+    margin: 60px;
     position: relative;
     padding-bottom: 10px;
     display: inline-block;
