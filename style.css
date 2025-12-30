@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap');
+
+:root {
+  --soft-black: #0d0d0d;
+}
+
+body {
+  background-color: var(--soft-black);
+  color: #e5e5e5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  opacity: .02;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn.active {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
+
+section, footer, .card-ui, .cert-card, .nav-link, input, textarea {
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1), color 0.8s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.8s ease;
+}
+
+.project-card {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cert-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background-color 0.7s ease, border-color 0.7s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✨ ZEBRA LIGHT MODE ✨ */
+body.light-mode .zebra-0 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+body.light-mode .zebra-1 {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+body.light-mode .zebra-1 .serif,
+body.light-mode .zebra-1 .nav-link,
+body.light-mode .zebra-1 .text-zinc-500,
+body.light-mode .zebra-1 .filter-btn {
+  color: #ffffff !important;
+  opacity: 0.8;
+}
+body.light-mode .zebra-1 .filter-btn.active {
+  color: #60a5fa !important;
+  border-bottom: 2px solid #60a5fa !important;
+}
+body.light-mode .zebra-1 input,
+body.light-mode .zebra-1 textarea {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+body.light-mode .zebra-1 input:focus,
+body.light-mode .zebra-1 textarea:focus {
+  border-color: #60a5fa !important;
+}
+body.light-mode .zebra-1 .bg-blue-600 {
+  background-color: #60a5fa !important;
+}
+
+/* Profile Photo */
+.profile-photo {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 50px rgba(37, 99, 235, 0.2);
+  transition: all 0.5s ease;
+}
+.profile-photo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 70px rgba(37, 99, 235, 0.4);
+}
